@@ -1,0 +1,140 @@
+body {
+  background-color: #F0F2F5;
+}
+
+.cardframe {
+  height: 260px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+  cursor:pointer;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.front {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+}
+
+.imgback {
+  background-color: #F0F2F5;
+  -webkit-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+}
+
+.cardframe:hover .card{
+  -webkit-transform: rotateY( 180deg );
+          transform: rotateY( 180deg );
+}
+
+
+.navbar-box {
+  background-color: #041528;
+}
+
+.navbar-box a {
+  color: #fff;
+}
+
+.navbar-logo {
+  width: 160px;
+  height: 32px;
+  display: block;
+  background-color: #364453;
+}
+
+.nav-item {
+  font-size: 20px;
+  padding: 24px 19px 26px;
+  width: auto;
+  height: 64px;
+}
+
+.nav-item:hover {
+  background-color: #4090F7;
+}
+
+.nav-link {
+  padding: 0;
+  line-height: 14px;
+  font-size: 20px;
+}
+
+.button-margin {
+  margin: 22px 16px 26px;
+  padding: 0;
+}
+
+.navbar-toggler {
+  background: none;
+  border: none;
+  display: inline-block;
+}
+
+.burger-navbar {
+  background-color: #979797;
+  display: block;
+  width: 16px;
+  height: 3px;
+  margin: 0 auto 3px;
+}
+
+.burger-bottom {
+  margin: 0 auto 0;
+}
+
+.navbar-toggler span {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.navbar-toggler span:nth-child(1) {
+  -webkit-transform-origin: left-center;
+          transform-origin: left-center;
+}
+
+.navbar-toggler span:nth-child(2) {
+  -webkit-transform-origin: left-center;
+          transform-origin: left-center;
+}
+
+.navbar-toggler span:nth-child(3) {
+  -webkit-transform-origin: left-center;
+          transform-origin: left-center;
+}
+
+.navbar-toggler.open span:nth-child(1) {
+  -webkit-transform: translate(0, 6px) rotate(45deg);
+          transform: translate(0, 6px) rotate(45deg);
+}
+
+.navbar-toggler.open span:nth-child(2) {
+  width: 0;
+  opacity: 0%;
+}
+
+.navbar-toggler.open span:nth-child(3) {
+  -webkit-transform: translate(0, -6px) rotate(-45deg);
+          transform: translate(0, -6px) rotate(-45deg);
+}
